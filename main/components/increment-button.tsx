@@ -3,7 +3,7 @@
 
 import { useState, useEffect } from 'react';
 
-export default function ClientStateDemo() {
+export default function IncrementButton() {
   const [count, setCount] = useState(0);
 
   // optional: mimic mount effects
@@ -12,9 +12,12 @@ export default function ClientStateDemo() {
   }, []);
 
   return (
-    <div className="space-y-2">
+    <div className="flex flex-col items-center gap-2">
       <p>Count: {count}</p>
+	  <div className="flex flex-row gap-2">
       <button onClick={() => setCount((c) => c + 1)}>Increment</button>
+	  <button onClick={() => setCount((c) => c - 1)}>Decrement</button>
+	  </div>
     </div>
   );
 }

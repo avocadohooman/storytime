@@ -1,9 +1,10 @@
-import {  Conversation } from '../components';
+import {   IncrementButton, Greetings, Conversation } from '../components';
 
 export default function Page() {
 	return (<div className="flex h-screen flex-col items-center justify-center">
-		<h1 className="text-2xl font-bold">Hello, Next.js!</h1>
-			<Conversation />
+		<Greetings />
+		<IncrementButton />
+		<Conversation />
 	</div>
 	)
   }
